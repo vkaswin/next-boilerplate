@@ -36,6 +36,8 @@ export const getStaticProps = async () => {
       props: {
         data,
       },
+      //* Incremental Static Generation (ISR) this will fetch the latest data from the api every 10 seconds on each request without generating a build
+      //   revalidate: 10,
     };
   } catch (e) {
     console.log(e);

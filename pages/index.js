@@ -17,11 +17,16 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/ssg/post">
-        <a style={style}>Static Site Generation</a>
+        <a style={style}>
+          Static Site Generation - Generate a page at build time, Very Faster
+        </a>
       </Link>
       <br />
       <Link href="/ssg/todo">
-        <a style={style}>Server Side Rendering</a>
+        <a style={style}>
+          Server Side Rendering - Generate a page at the request time, Slower
+          than SSG
+        </a>
       </Link>
     </div>
   );

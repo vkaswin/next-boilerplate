@@ -27,7 +27,7 @@ const TodoListSSR = ({ data }) => {
 export default TodoListSSR;
 
 //* Static Site Generation (SSG)
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/todos");
     const data = await res.json();
