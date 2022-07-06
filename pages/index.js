@@ -2,6 +2,13 @@ import Head from "next/head";
 import Link from "next/link";
 
 const Home = () => {
+  const style = {
+    display: "block",
+    cursor: "pointer",
+    fontSize: "34px",
+    color: "black",
+    textDecoration: "none",
+  };
   return (
     <div>
       <Head>
@@ -10,11 +17,11 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/ssg/post">
-        <h1 style={{ cursor: "pointer" }}>Static Site Generation</h1>
+        <a style={style}>Static Site Generation</a>
       </Link>
       <br />
       <Link href="/ssg/todo">
-        <h1 style={{ cursor: "pointer" }}>Server Side Rendering</h1>
+        <a style={style}>Server Side Rendering</a>
       </Link>
     </div>
   );

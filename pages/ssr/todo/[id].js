@@ -13,9 +13,9 @@ export default Todo;
 export const getStaticPaths = async () => {
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/todos");
-    const data = res.json();
+    const data = await res.json();
     const paths = data.map(({ id }) => {
-      return { params: { id } };
+      return { params: { id: String(id) } };
     });
 
     return {
